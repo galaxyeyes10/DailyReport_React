@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import Area from './Area';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id='container'>
+      <div className="area-a">
+        <Area url="https://picsum.photos/id/5/200/200" />
+      </div>
+      <div className="area-b">
+        <Area url="https://picsum.photos/id/10/200/200" />
+      </div>
+      <div className="area-c">
+        <Area url="https://picsum.photos/id/15/200/200" />
+      </div>
+      <div className="area-d">
+        <Area url="https://picsum.photos/id/20/200/200" />
+      </div>
     </div>
   );
 }
