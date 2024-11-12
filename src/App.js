@@ -4,18 +4,10 @@ import Area from './Area';
 function App() {
   return (
     <div id='container'>
-      <div className="area-a">
-        <Area url="https://picsum.photos/id/5/200/200" />
-      </div>
-      <div className="area-b">
-        <Area url="https://picsum.photos/id/10/200/200" />
-      </div>
-      <div className="area-c">
-        <Area url="https://picsum.photos/id/15/200/200" />
-      </div>
-      <div className="area-d">
-        <Area url="https://picsum.photos/id/20/200/200" />
-      </div>
+      <Area id={"a"} url={"https://picsum.photos/id/51/600/600"} />
+      <Area id={"b"} url={"https://picsum.photos/id/11/600/600"} />
+      <Area id={"c"} url={"https://picsum.photos/id/15/600/600"} />
+      <Area id={"d"} url={"https://picsum.photos/id/20/600/600"} />
     </div>
   );
 }

@@ -1,37 +1,31 @@
-import { useEffect, useRef } from 'react';
+// import { useEffect } from "react"
 
-function Area({ url }) {
-    const areaRef = useRef(null);
-
-    function backgroundImg(url) {
-        if (areaRef.current) {
-            areaRef.current.style.backgroundImage = `url(${url})`;
-        }
+function Area({id, url}) {
+    // useEffect(()=> {
+    //     const imgElement = document.querySelectorAll(`${id} img`);
+    //         imgElement.style.opacity = "0.5";
+    //         imgElement.style.transition = "0.3s";
+    //     }, [id]);
+    
+    function scaleAndOpacityOn(event) {
+        event.target.style.scale = "1.2"
+        event.target.style.opacity = "1"
     }
-
-    useEffect(() => {
-        if (url) {
-            backgroundImg(url); 
-        }
-    }, [url]);
-
+    function scaleAndOpacityOut(event) {
+        event.target.style.scale = "1"
+        event.target.style.opacity = "0.5"
+    }
+    
     return (
-        <div
-            ref={areaRef}
-            className="area"
-            onMouseOver={(event) => { scale(event); }}
-            onMouseOut={(event) => { scaleOut(event); }}
-        >
-        </div>
-    );
+        <>
+            <div 
+            id={id}
+            onMouseOver={scaleAndOpacityOn}
+            onMouseOut={scaleAndOpacityOut}
+            >
+                <img src={url} alt=""/>
+            </div>
+        </>
+    )
 }
-
-function scale(event) {
-    event.target.style.transform = `scale(1.3)`;
-}
-
-function scaleOut(event) {
-    event.target.style.transform = `scale(1)`;
-}
-
 export default Area;

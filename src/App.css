@@ -12,25 +12,24 @@
         "a b"
         "c d";
 }
-.area {
-    height: 100%;
-}
-.area-a {
+
+#a {
     grid-area: a;
     overflow: hidden;
 }
-
-.area-b {
+#b {
     grid-area: b;
     overflow: hidden;
 }
-
-.area-c {
+#c {
     grid-area: c;
     overflow: hidden;
 }
-
-.area-d {
+#d {
     grid-area: d;
     overflow: hidden;
+}
+img {
+    width: 100%;
+    height: auto;
 }
