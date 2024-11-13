@@ -1,21 +1,24 @@
-// import { useEffect } from "react"
+import { useEffect } from "react"
 
 function Area({id, url}) {
-    // useEffect(()=> {
-    //     const imgElement = document.querySelectorAll(`${id} img`);
-    //         imgElement.style.opacity = "0.5";
-    //         imgElement.style.transition = "0.3s";
-    //     }, [id]);
-    
+    function imgSetting () {
+        const imgElement = document.querySelectorAll(`${id} img`);
+        imgElement.forEach(img => {
+            img.style.opacity = "0.5";
+            img.style.transition = "0.3s";
+        });
+    }
     function scaleAndOpacityOn(event) {
-        event.target.style.scale = "1.2"
+        event.target.style.transform = "scale(1.2)"
         event.target.style.opacity = "1"
     }
     function scaleAndOpacityOut(event) {
-        event.target.style.scale = "1"
+        event.target.style.transform = "scale(1)"
         event.target.style.opacity = "0.5"
     }
     
+    useEffect(()=> {imgSetting()}, []);
+
     return (
         <>
             <div 
