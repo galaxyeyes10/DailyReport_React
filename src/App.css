@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    height: 15vh;
+}
+
+main {
+    height: fit-content;
+    width: 1423px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+section {
+    width: 80%;
+}
+#item-title {
+    margin-left: 30px;
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+}
+
+.item {
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: 1fr 1.5fr 1.5fr;
+    grid-template-areas: 
+        "a b c"
+        "a d c"
+        "a d e";
+    border-bottom: 1px solid rgb(196, 196, 196);
+    margin-left: 30px;
+    padding: 20px 0;
+}
+.item-img {
+        grid-area: a;
+    min-height: auto;
+    min-width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item-img:hover {
+    cursor: pointer;
+}
+.item-name {
+        grid-area: b;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+}
+.item-name:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+.item-details {
+        grid-area: d;
+    color: rgb(48, 48, 48);
+    font-size: 13px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.item-price {
+        grid-area: c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.price, .won {
+    color: rgb(48, 48, 48);
+    font-size: 13px;
+}
+.price-text {
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+button {
+        grid-area: e;
+    background-color: white;
+    border: 1px solid rgb(168, 168, 168);
+    border-radius: 5px;
+    font-size: 13px;
+    transition: 0.2s;
+    z-index: 1;
+}
+button:hover {
+    background-color: rgb(168, 168, 168, 0.5);
+    cursor: pointer;
+}
+button > .cart {
+    width: 25px;
+    height: auto;
+}
+
+aside {
+    border-left: 1px solid black;
+    margin-left: 20px;
+    width: 20%;
+}
+#cart-title {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+}
+.item-container {
+    display: flex;
+    align-items: end;
+    background-color: rgb(168, 168, 168, 0.5);
+    border-radius: 5px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+.wantbuy-img {
+    background-position: center;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: inline-block;
+    margin-right: 10px;
+}
+footer {
+    height: 15vh;
+}
