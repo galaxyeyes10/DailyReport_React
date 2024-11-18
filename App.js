@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express();
 const cors = require('cors')
+const port = process.env.port || 3001;
 
 app.use(cors())
 
@@ -21,7 +22,7 @@ app.get('*', (req, res)=> {
 })
 
 app.listen(3001, ()=> {
-    console.log("connected on server port 3001!!!");    
+    console.log("connected on server port" + port);    
 });
 
 module.exports = app;
