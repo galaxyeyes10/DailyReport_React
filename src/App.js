@@ -12,7 +12,7 @@ function App() {
     }
 
     function search() {
-        fetch(`http://localhost:3001/${inputText}`)
+        fetch(`https://server-el43.onrender.com/${inputText}`)
             .then(response => response.text())
             .then(data => {setFruit(data)})
             .catch(error => console.error('Fetch error:', error));
